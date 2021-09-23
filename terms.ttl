@@ -1,0 +1,395 @@
+@prefix : <https://gdac.github.io/business-glossary/#> .
+@prefix dcterms: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <https://purl.org/dcterms/elements/1.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology ;
+    owl:imports dcterms: .
+
+:data-modelling a skos:Concept ;
+    dcterms:creator "GDAC Data Modelling Subgroup"@en ;
+    dcterms:publisher "GDAC"@en ;
+    skos:definition "Is the process of discovering, analysing, and scoping data requirements, and then representing and communicating these data requirements in a precise form call the data model. This process is iterative and may include a conceptual, logical, and physical model."@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "data-modelling" ;
+    skos:prefLabel "Data Modelling"@en ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> .
+
+:data-standards a skos:Concept ;
+    dcterms:creator "GDAC Data Standards Subgroup"@en ;
+    dcterms:publisher "GDAC"@en ;
+    skos:definition "A set of rules by which data is described, recorded and shared in order to ensure common understanding and to maintain data quality."@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "data-standards" ;
+    skos:note "A set of well-defined rules by which data is described, recorded and shared in order to ensure common understanding among data users and to maintain data quality (integrity, consistency, format and meaning). They are fundamental to data quality because they provide a means of comparison and offer the potential to simplify processes. Data standards can take different forms depending on what they describe: assertions about how a field must be populated, rules governing the relationships between fields, detailed documentation of acceptable and unacceptable values, format, etc. Enforcing standards  promotes consistent results from the processes using them."@en ;
+    skos:prefLabel "Data Standards"@en ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> .
+
+:ontology a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:definition """A formal collection of concepts within a specific domain or subject area including information about their properties and relationships.. Within an ontology concepts are defined using a subclass hierarchy, by assigning and defining properties and by defining relationships between the concepts.
+
+Ontologies describe classes (concepts), individuals (instances), attributes, relations, events. In an ontology, possible relationships are inferred based on existing relationships, known as ‘open world assumption’. 
+
+Ontology languages such as Resource Description Framework Schema (RDFS) may be used to develop ontologies by encoding the knowledge about specific domains. An extension to RDFS, Web Ontology Language (OWL) is a formal syntax that can be used for defining ontologies. 
+
+Ontologies are used in the Semantic Web as the primary knowledge representations in the exchange of information between Semantic Web Technologies. An ontology’s goal is to provide a common, referenceable set of concepts for use in communication."""@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "ontology"@en ;
+    skos:prefLabel "Ontology"@en ;
+    skos:related :business-glossary,
+        :data-catalogue,
+        :data-dictionary ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> ;
+    prov:wasDerivedFrom <https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html>,
+        <https://tomgruber.org/writing/ontology-definition-2007.htm>,
+        <https://www.dataversity.net/what-is-ontology/> .
+
+:associative-relationship a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:definition """A relationship between terms or records that are conceptually close but where the relationship is neither equivalent nor hierarchical.
+
+Providing visibility of concepts with an associative relationship can:
+-	assist users in gaining a broader understanding of a topic
+-	provide clarification between concepts with overlapping meanings that may be confused by users but are intended to be used as separate concepts
+-	provide clarity where a concept is a necessary component in any explanation or definition of another.
+
+Associated relationships may exist between terms in the same hierarchy or different hierarchies.
+
+A vocabulary may list and define the types of associative relationships used. The types of relationship will vary from vocabulary to vocabulary, for example, the types of associative relationships between generic terms would differ to the types of associative relationships between people. 
+
+Types of associative relationships found between terms include:
+-	related to
+-	formerly related to 
+-	distinguished from
+-	meaning/usage overlaps with
+-	possible identified as
+
+Types of associative relationships found between people include:
+-	student of
+-	teacher of
+-	uncle of"""@en;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "associative-relationship"@en ;
+    skos:prefLabel "Associative Relationship"@en ;
+    skos:related :hierarchical-relationship ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> ;
+    prov:wasDerivedFrom <https://getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf>,
+        <https://marciazeng.slis.kent.edu/Z3919/44association.htm>,
+        <https://thetaxonomyblog.wordpress.com/category/building-taxonomies/associative-relationships/> .
+
+:data-lineage a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    skos:definition "The path data follows from its original source to its current location. A description of the data lineage will include details of the pathway that was followed and the changes which were made to the data at different points along this pathway."@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "data-lineage"@en ;
+    skos:prefLabel "Data Lineage"@en ;
+    skos:related :provenance ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> ;
+    prov:wasDerivedFrom <https://www.dama.org/cpages/body-of-knowledge> .
+
+:genus-species-relationship a skos:Concept ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:altLabel "Generic Relationship"@en ;
+    skos:broader :hierarchical-relationship ;
+    skos:definition "A type of hierarchical relationship that identifies a link between a class and its members. Within this type of relationship, the narrower/subordinate/child term will be a ‘kind of’, ‘type of’ or ‘manifestation of’ the broader/superordinate/parent term.  The placement of a child may be tested by the all/some argument. "@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "genus-species-relationship"@en ;
+    skos:prefLabel "The Genus/Species Relationship"@en ;
+    skos:related :whole-part-relationship,
+        :instance-relationship ;
+    prov:wasDerivedFrom <https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm>,
+        <https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf> .
+
+:whole-part-relationship a skos:Concept ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:broader :hierarchical-relationship ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "whole-part-relationship"@en ;
+    skos:prefLabel "Whole/Part Relationship"@en ;
+    skos:related :genus-species-relationship,
+        :instance-relationship ;
+    prov:wasDerivedFrom <https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm>,
+        <https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf> .
+
+:provenance a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:definition "Information about entities, activities, and people involved in producing a piece of data or thing, which can be used to form assessments about its quality, reliability or trustworthiness."@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "provenance"@en ;
+    skos:prefLabel "Provenance"@en ;
+    skos:related :data-lineage ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> ;
+    prov:wasDerivedFrom <https://www.dama.org/cpages/body-of-knowledge>,
+        <https://www.w3.org/TR/prov-overview/> .
+
+<https://gdac.github.io/business-glossary/#whole-part-relationship> a skos:Concept ;
+    skos:broader :hierarchical-relationship ;
+    skos:definition """A type of hierarchical relationship that covers situations where one concept is inherently included in the other. Each child should be part of the parent and all other ancestors so the terms can be organised into logical hierarchies with the whole or parent being treated as the superordinate or broader term. Whole/part relationships can be applied to several types of terms including geographic locations, parts of the body.
+Example of whole/part relationships:
+- United Kingdom
+  - England
+  - Wales
+  - Scotland
+  - Northern Ireland."""@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:prefLabel "Whole/Part Relationship"@en ;
+    skos:related :instance-relationship,
+        <https://gdac.github.io/business-glossary/#the-genus/species-relationship> ;
+    prov:wasDerivedFrom <https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm>,
+        <https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf> .
+
+:data-catalogue a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:definition """An inventory of available data assets supported by a collection of metadata, enabling data users to:
+- search for and find data quickly
+- see all the available datasets
+- evaluate data and make informed choices on the suitability of data
+- perform data preparation and analysis efficiently and with confidence.
+
+A data catalogue may provide other capabilities including:
+- support for data curation and collaborative data management 
+- data usage tracking
+- intelligent dataset recommendations 
+- enforcing policy and data governance.
+
+Data catalogues should not exist in isolation but should share metadata bidirectionally with other data management and analysis tools and data platforms. 
+
+Modern machine learning-augmented data catalogues may automate various tasks involved in data cataloguing, including metadata discovery, ingestion, translation, enrichment and the creation of semantic relations between metadata. """@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "data-catalogue"@en ;
+    skos:prefLabel "Data Catalogue"@en ;
+    skos:related :business-glossary,
+        :data-dictionary ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> ;
+    prov:wasDerivedFrom <https://www.alation.com/blog/what-is-a-data-catalog/>,
+        <https://www.dataversity.net/what-is-a-data-catalog/>,
+        <https://www.gartner.com/en/documents/3957301/augmented-data-catalogs-now-an-enterprise-must-have-for-> .
+
+:data-dictionary a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    skos:definition """A centralised repository used to define and communicate the structure and content of data sets.
+
+A data dictionary may describe data in business terms, however, the information held within a data dictionary extends to include the ‘technology relevant’ or ‘machine readable’ articulation of data. 
+
+A data dictionary will include information on data types, detail of structure and security relationships. It can be used to manage the names, descriptions, structure, characteristics, storage requirements, default values, relationships, uniqueness, and other attributes of every data element in a data model.
+
+The data dictionary bridges the gap between the content as it's defined and how that content is articulated in a physical implementation. A data user for example, may consult a data dictionary if they wanted to know if ‘Customer ID’ is a character field or numerical field. 
+
+The content of a data dictionary is usually extracted from the database or modelling tool and is sometimes seen as a data model in a narrative form."""@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "data-dictionary"@en ;
+    skos:prefLabel "Data Dictionary"@en ;
+    skos:related :business-glossary,
+        :data-catalogue ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> ;
+    prov:wasDerivedFrom <https://thedatamaven.net/2017/04/whats-the-difference-glossary-dictionary-taxonomy-ontology/>,
+        <https://www.dama.org/cpages/body-of-knowledge>,
+        <https://www.dataversity.net/what-is-a-data-catalog/>,
+        <https://www.dataversity.net/what-is-a-data-dictionary/> .
+
+:facet-taxonomy a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:broader :taxonomy ;
+    skos:definition "A type of Taxonomy that allows an item to be assigned to multiple taxonomies (sets of attributes), enabling the classification to be ordered in multiple ways, rather than in a single, predetermined order (as in a strict hierarchy)."@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "facet-taxonomy"@en ;
+    skos:prefLabel "Facet Taxonomy"@en ;
+    skos:related :flat-taxonomy,
+        :hierarchical-taxonomy,
+        :network-taxonomy ;
+    prov:wasDerivedFrom <https://martech.org/website-taxonomy-guidelines-tips/>,
+        <https://www.dama.org/cpages/body-of-knowledge> .
+
+:flat-taxonomy a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:broader :taxonomy ;
+    skos:definition "A type of Taxonomy that is simply a list of categories. A Flat Taxonomy has only top-level categories."@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "flat-taxonomy"@en ;
+    skos:prefLabel "Flat Taxonomy"@en ;
+    skos:related :facet-taxonomy,
+        :hierarchical-taxonomy,
+        :network-taxonomy ;
+    prov:wasDerivedFrom <https://martech.org/website-taxonomy-guidelines-tips/>,
+        <https://www.dama.org/cpages/body-of-knowledge> .
+
+:hierarchical-taxonomy a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:broader :taxonomy ;
+    skos:definition """A type of Taxonomy that is a hierarchical arrangement of categories. Categories are organised using hierarchical relationships into any number of levels of category and sub-category as required. A sub-category inherits all the properties of the category above it but can also have additional properties.
+
+Individual categories within the hierarchy are arranged in order of importance or status. Moving up the hierarchy means expanding, or broadening, the category. Moving down the hierarchy means refining, or narrowing, the category.
+
+Not all hierarchies are simple, one-to-one-or-many parent-child relationships. Some hierarchies contain categories that can be in multiple parent categories. Taxonomies that allow this cross-listing are known as polyhierarchical."""@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "hierarchical-taxonomy"@en ;
+    skos:prefLabel "Hierarchical Taxonomy"@en ;
+    skos:related :facet-taxonomy,
+        :flat-taxonomy,
+        :network-taxonomy ;
+    prov:wasDerivedFrom <https://martech.org/website-taxonomy-guidelines-tips/>,
+        <https://www.dama.org/cpages/body-of-knowledge> .
+
+:network-taxonomy a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:broader :taxonomy ;
+    skos:definition "A type of Taxonomy that organises content into categories with hierarchical relationships or associative relationships. Categories can be linked to any other categories. Relationships among items can have different meanings, including semantic ones. E.g. “people who buy this also bought that”, “most popular”, etc."@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "network-taxonomy"@en ;
+    skos:prefLabel "Network Taxonomy"@en ;
+    skos:related :facet-taxonomy,
+        :flat-taxonomy,
+        :hierarchical-taxonomy ;
+    prov:wasDerivedFrom <https://martech.org/website-taxonomy-guidelines-tips/>,
+        <https://www.dama.org/cpages/body-of-knowledge> .
+
+:business-glossary a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:definition """A repository of approved, governed and maintained compendium of business term names, there definitions and, optionally, their relationships to other business terms. It is the vocabulary of an organisation. A business term represents a business concept or an item of terminology of the organisation. 
+
+A Business Glossary is used to identify, approve and promote a consistent vocabulary and understanding of that vocabulary within an organisation. It provides an authoritative source for all business operations.
+
+The Business Glossary captures attributes of a business term such as: 
+- Name
+- Definition
+- Acronyms or abbreviations
+- Synonyms
+- Name of the person, or their role, identifying the term, and date updated
+- Name of the person, or their role, who is the term steward
+- Terms with associative or hierarchical relationships
+- Common misunderstandings
+- Provenance"""@en;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "business-glossary"@en ;
+    skos:prefLabel "Business Glossary"@en ;
+    skos:related :data-catalogue,
+        :data-dictionary,
+        :taxonomy ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> ;
+    prov:wasDerivedFrom <https://thedatamaven.net/2017/04/whats-the-difference-glossary-dictionary-taxonomy-ontology/>,
+        <https://www.dama.org/cpages/body-of-knowledge>,
+        <https://www.dataversity.net/business-glossary-basics/>,
+        <https://www.dataversity.net/what-is-a-business-glossary/> .
+
+:instance-relationship a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:broader :hierarchical-relationship ;
+    skos:definition """A type of hierarchical relationship found in vocabularies with a general category of things or events where the narrower/subordinate terms represent specific examples or instances of the broader/superordinate term. 
+Example of instance relationship:
+Rivers
+- Thames
+- Nile
+- Yangtze"""@en,
+        """A type of hierarchical relationship found in vocabularies with a general category of things or events where the narrower/subordinate terms represent specific examples or instances of the broader/superordinate term. 
+Example of instance relationship:
+Rivers
+- Thames
+- Nile
+- Yangtze"""@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:notation "instance-relationship"@en ;
+    skos:prefLabel "Instance Relationship"@en ;
+    skos:related :genus-species-relationship,
+        :whole-part-relationship,
+        <https://gdac.github.io/business-glossary/#the-genus/species-relationship>,
+        <https://gdac.github.io/business-glossary/#whole-part-relationship> ;
+    prov:wasDerivedFrom <https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm>,
+        <https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf> .
+
+:taxonomy a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:definition """A centralised repository used to define and communicate the structure and content of data sets.
+
+A data dictionary may describe data in business terms, however, the information held within a data dictionary extends to include the ‘technology relevant’ or ‘machine readable’ articulation of data. 
+
+A data dictionary will include information on data types, detail of structure and security relationships. It can be used to manage the names, descriptions, structure, characteristics, storage requirements, default values, relationships, uniqueness, and other attributes of every data element in a data model.
+The data dictionary bridges the gap between the content as its defined and how that content is articulated in a physical implementation. A data user for example, may consult a data dictionary if they wanted to know if ‘Customer ID’ is a character field or numerical field. 
+The content of a data dictionary is usually extracted from the database or modelling tool and is sometimes seen as a data model in a narrative form."""@en ;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:narrower :facet-taxonomy,
+        :flat-taxonomy,
+        :hierarchical-taxonomy,
+        :network-taxonomy ;
+    skos:notation "taxonomy"@en ;
+    skos:prefLabel "Taxonomy"@en ;
+    skos:related :business-glossary,
+        :data-dictionary ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> ;
+    prov:wasDerivedFrom <https://en.wikipedia.org/wiki/Taxonomy>,
+        <https://martech.org/website-taxonomy-guidelines-tips/>,
+        <https://www.dama.org/cpages/body-of-knowledge>,
+        <https://www.dataversity.net/what-is-taxonomy/> .
+
+:hierarchical-relationship a skos:Concept ;
+    dcterms:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dcterms:publisher "GDAC"@en ;
+    dct:creator <https://gdac.github.io/business-glossary-subgroup> ;
+    dct:publisher "GDAC"@en ;
+    skos:definition """Refer to those relationships based on degrees or levels of superordination and subordination. These types of relationship are often referred to as broader/narrower relationships or parent/child relationship. Within a hierarchical relationship the superordinate/broader/parent term represents a class or a whole and the subordinate/narrower/child term refers to its members or parts. 
+
+The 3 main types of hierarchical relationship include:
+- the whole/part relationships
+- the instance relationship
+- genus/species relationship."""@en;
+    skos:inScheme <https://gdac.github.io/business-glossary> ;
+    skos:narrower :instance-relationship,
+        <https://gdac.github.io/business-glossary/#the-genus/species-relationship>,
+        <https://gdac.github.io/business-glossary/#whole-part-relationship> ;
+    skos:notation "hierarchical-relationship"@en ;
+    skos:prefLabel "Hierarchical Relationship"@en ;
+    skos:related :associative-relationship ;
+    skos:topConceptOf <https://gdac.github.io/business-glossary> ;
+    prov:wasDerivedFrom <https://marciazeng.slis.kent.edu/Z3919/43hierarchy.htm>,
+        <https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/relationships.pdf> .
+
+<https://gdac.github.io/business-glossary-subgroup> a vcard:Group ;
+    vcard:organization-name "GDAC Business Glossary Sub-group"@en .
+
+<https://gdac.github.io/business-glossary> a skos:ConceptScheme ;
+    dct:contributor <https://gdac.github.io/business-glossary-subgroup> .
+

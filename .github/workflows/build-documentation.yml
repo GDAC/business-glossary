@@ -1,0 +1,45 @@
+name: Build Documentation
+on: [push]
+jobs:
+  build-documentation:
+    runs-on: ubuntu-latest
+    container: 
+      image: python:latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      - name: List files in the repository
+        run: |
+          ls .
+      - name: Build documentation
+        run: |
+          cd src
+          python -m pip install -r requirements.txt
+          python process.py
+      - name: Commit documentation to repo
+        run: |
+          echo ${{ github.ref }}
+          git add .
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "CI: Building documentation" -a | exit 0
+      - name: Push changes
+        if: github.ref == 'refs/heads/main'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install rsync 📚
+        run: |
+          apt update
+          apt install --yes rsync
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: main
+          folder: .
+      - run: echo "🍏 This job's status is ${{ job.status }}."
